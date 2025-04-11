@@ -49,15 +49,6 @@
     position: relative;
   }
 
-  /* .slideshow-track {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(250px, auto);
-    gap: 1rem;
-    animation: scroll 30s linear infinite;
-    width: max-content;
-  } */
-
   .slideshow-track {
     display: flex;
     animation: scroll 30s linear infinite;
@@ -87,6 +78,61 @@
     }
     100% {
       transform: translateX(-50%);
+    }
+  }
+
+  /* --- Responsive tilføjelser --- */
+
+  @media (max-width: 600px) {
+    .hero-title {
+      font-size: 2.2rem;
+      margin-top: -10px;
+    }
+
+    .slideshow-container {
+      height: 50vh;
+    }
+
+    .hero-card {
+      height: 50vh;
+    }
+
+    .hero-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .hero-title {
+      font-size: 3rem;
+      margin-top: -20px;
+    }
+
+    .slideshow-container {
+      height: 60vh;
+    }
+
+    .hero-card {
+      height: 60vh;
+    }
+
+    .hero-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  /* Desktop (1025px og op) */
+  @media (min-width: 1025px) {
+    .hero-title {
+      font-size: 4rem;
+    }
+
+    .slideshow-container {
+      height: 80vh;
     }
   }
 </style>
