@@ -1,8 +1,23 @@
 ---
 import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import Hvorforpleasant from "../components/Hvorforpleasant.astro";
+import Quote from "../components/Quote.astro";
+import Explore from "../components/Explore.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
-  <Welcome />
+  <body>
+    <Header />
+    <main>
+      <Hero />
+      <Hvorforpleasant />
+      <Quote />
+      <Explore />
+    </main>
+    <Footer />
+  </body>
 </Layout>

@@ -1,0 +1,92 @@
+<section class="hero-gallery">
+  <h2 class="hero-title">what makes life <span class="highlight">pleasant</span> ?</h2>
+
+  <div class="slideshow-container">
+    <div class="slideshow-track">
+      <div class="hero-card"><img src="/img/1.webp" alt="" /></div>
+
+      <div class="hero-card"><img src="/img/2.webp" alt="" /></div>
+
+      <div class="hero-card"><img src="/img/3.webp" alt="" /></div>
+
+      <div class="hero-card"><img src="/img/4.webp" alt="" /></div>
+
+      <!-- kopiret billeder for loop effekt! -->
+
+      <div class="hero-card"><img src="/img/1.webp" alt="" /></div>
+      <div class="hero-card"><img src="/img/2.webp" alt="" /></div>
+      <div class="hero-card"><img src="/img/3.webp" alt="" /></div>
+      <div class="hero-card"><img src="/img/4.webp" alt="" /></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-gallery {
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+    margin-top: -35px;
+    margin-bottom: 2rem;
+    font-family: "felt-tip-woman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .hero-title .highlight {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+
+  .slideshow-container {
+    overflow: hidden;
+    width: 100%;
+    height: 80vh;
+    max-width: 100vw;
+    position: relative;
+  }
+
+  /* .slideshow-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(250px, auto);
+    gap: 1rem;
+    animation: scroll 30s linear infinite;
+    width: max-content;
+  } */
+
+  .slideshow-track {
+    display: flex;
+    animation: scroll 30s linear infinite;
+    gap: 1rem;
+  }
+
+  .hero-card {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 0 0.5rem;
+  }
+
+  .hero-card img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* animation */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+</style>

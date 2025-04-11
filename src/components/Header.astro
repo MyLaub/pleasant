@@ -1,0 +1,86 @@
+<header class="header">
+  <div class="header-left">
+    <h1 class="logo">pleasant</h1>
+    <nav class="nav-links">
+      <a href="#">kasketter</a>
+      <a href="#">tøj</a>
+      <a href="#">Livsstil</a>
+      <a href="#">drops</a>
+    </nav>
+  </div>
+
+  <div class="header-right">
+    <div class="account">
+      <span class="icon">👤</span>
+      <span>Min profil</span>
+    </div>
+    <div class="cart">
+      <span class="icon">🛒</span>
+      <span>Kurv</span>
+    </div>
+  </div>
+</header>
+
+<style>
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: var(--beige);
+  }
+
+  .header-left {
+    display: flex;
+    align-items: baseline;
+    gap: 2rem;
+  }
+
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: baseline; /* <-- matcher logo baseline */
+    gap: 1.5rem; /* bedre spacing */
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 1.2rem; /* evt. match logo eller lavere */
+  }
+
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+
+  .header-right {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  span {
+    font-family: "felt-tip-woman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+  }
+
+  .account,
+  .cart {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    cursor: pointer;
+  }
+
+  .icon {
+    font-size: 1.1rem;
+  }
+</style>

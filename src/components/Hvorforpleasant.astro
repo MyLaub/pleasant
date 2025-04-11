@@ -1,0 +1,103 @@
+<section class="om-os-sektion">
+  <div class="om-os-billede">
+    <img src="/img/rasmus.webp" alt="Rasmus" />
+  </div>
+
+  <div class="om-os-tekst">
+    <h2>
+      hvorfor <span class="fremhæv">pleasant</span> ?
+    </h2>
+
+    <p>
+      Vi vil lave tøj med mindst mulig miljøpåvirkning<br />
+      og mest mulig glæde
+    </p>
+
+    <p class="fed">For at gøre det til virkelighed forfølger vi følgende mål:</p>
+
+    <ul>
+      <li><strong>Nyt tøj af brugt tekstil*</strong></li>
+      <li><strong>Forlæng levetiden på tøj</strong></li>
+      <li><strong>Gør livet behageligt</strong></li>
+    </ul>
+
+    <p class="note">* Pånær sytråd og labels.</p>
+
+    <p class="fodnote">
+      Vi har ikke købt nyt tekstil siden 2021. Vi<br />
+      upcycler og laver nyt tøj af brugt tekstil.
+    </p>
+  </div>
+</section>
+
+<style>
+  .om-os-sektion {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    align-items: center;
+    padding: 3rem 1.5rem;
+    text-align: right;
+  }
+
+  .om-os-billede {
+    display: flex;
+    justify-content: center;
+  }
+
+  .om-os-billede img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .om-os-tekst {
+    padding right: 4rem;
+  }
+
+  .om-os-tekst h2 {
+    font-family: "felt-tip-woman", sans-serif;
+    font-size: 4rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+  }
+
+  .om-os-tekst .fremhæv {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .om-os-tekst p {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  .fed{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+  }
+
+  .om-os-tekst ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+  .om-os-tekst ul li {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+  }
+
+  .om-os-tekst .note {
+    font-family: "felt-tip-woman", sans-serif;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .om-os-tekst .fodnote {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+  }
+</style>

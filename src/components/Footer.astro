@@ -1,0 +1,145 @@
+<footer class="footer">
+  <div class="footer-kolonne footer-logo-kolonne">
+    <h1 class="footer-logo">pleasant</h1>
+    <p class="footer-quote">Pleasant er et tøjmærke, der upcycler og laver nyt tøj af brugt tekstil. God stil. God samvittighed.</p>
+    <p class="info">
+      webshop@pleasant.dk<br />
+      Svartid 1–2 hverdage<br />
+      CVR-nr: 42943274
+    </p>
+  </div>
+
+  <div class="footer-kolonne footer-links-kolonne">
+    <h3>Links</h3>
+    <ul>
+      <li><a href="#">Style guide</a></li>
+      <li><a href="#">Community</a></li>
+      <li><a href="#">Forhandlere</a></li>
+      <li><a href="#">Kontakt</a></li>
+      <li><a href="#">Returnportal</a></li>
+      <li><a href="#">Handelsbetingelser</a></li>
+      <li><a href="#">Privatlivspolitik (GDPR)</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-kolonne footer-community-kolonne">
+    <h3>Pleasant Community</h3>
+    <div class="tilmeld-boks">
+      <input type="email" placeholder="Email" />
+      <button>Tilmeld</button>
+    </div>
+    <div class="sociale-ikoner">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
+</footer>
+
+<div class="footer-copyright">
+  <p>Copyright © 2025, Pleasant.</p>
+</div>
+
+<style>
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8rem;
+    padding: 3rem 1.5rem;
+    background-color: #000;
+    color: var(--beige);
+  }
+
+  .footer-kolonne h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: var(--beige);
+  }
+  .footer-quote {
+    font-family: "felt-tip-woman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+  }
+  .info {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--beige);
+  }
+
+  .footer-kolonne a {
+    text-decoration: none;
+    font-size: 0.95rem;
+    color: var(--beige);
+  }
+
+  .footer-kolonne a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-kolonne ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-kolonne ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-logo {
+    max-width: 160px;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+    color: var(--beige);
+  }
+
+  .tilmeld-boks {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--beige);
+    padding-bottom: 0.5rem;
+  }
+
+  .tilmeld-boks input {
+    background: transparent;
+    border: none;
+    color: var(--beige);
+    flex: 1;
+    font-size: 1rem;
+  }
+
+  .tilmeld-boks input::placeholder {
+    color: var(--beige);
+    opacity: 0.7;
+  }
+
+  .tilmeld-boks button {
+    background: none;
+    border: none;
+    color: var(--beige);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+
+  .sociale-ikoner {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+    color: var(--beige);
+  }
+
+  .footer-copyright {
+    text-align: center;
+    font-size: 0.5rem;
+    background: #000;
+    color: var(--beige);
+    padding: 1rem 2rem;
+  }
+</style>
