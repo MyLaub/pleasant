@@ -26,11 +26,10 @@ p {
 /* fonts */
 
 /* global */
-* {
-  background-color: var(--beige);
-}
+
 main {
   margin: 0 auto;
+  background-color: var(--beige);
 }
 :root {
   --beige: #f4f1e9;
