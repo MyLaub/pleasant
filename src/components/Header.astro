@@ -4,9 +4,11 @@
     <nav class="nav-links">
       <a href="#">kasketter</a>
       <a href="#">tøj</a>
+      <a href="#">Livsstil</a>
       <a href="#">drops</a>
     </nav>
   </div>
+
   <div class="header-right">
     <div class="account">
       <span class="icon">👤</span>
@@ -25,27 +27,32 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
-    background-color: white;
-    border-bottom: 1px solid #ddd;
+    background-color: var(--beige);
   }
 
   .header-left {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 2rem;
   }
 
   .logo {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     margin: 0;
   }
 
+  .nav-links {
+    display: flex;
+    align-items: baseline; /* <-- matcher logo baseline */
+    gap: 1.5rem; /* bedre spacing */
+  }
+
   .nav-links a {
-    margin-right: 1rem;
     text-decoration: none;
-    color: #333;
+    color: black;
     font-weight: 500;
+    font-size: 1.2rem; /* evt. match logo eller lavere */
   }
 
   .nav-links a:hover {
