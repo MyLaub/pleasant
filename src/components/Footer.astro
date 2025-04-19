@@ -29,9 +29,9 @@
       <button>Tilmeld</button>
     </div>
     <div class="sociale-ikoner">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.facebook.com/makelifepleasant"><img src="/img/facebook.svg" alt="Facebook" /></a>
+      <a href="https://www.instagram.com/makelifepleasant/"><img src="/img/instagram.svg" alt="Instagram" /></a>
+      <a href="https://www.tiktok.com/@makelifepleasant"><img src="/img/tiktok.svg" alt="TikTok" /></a>
     </div>
   </div>
 </footer>
@@ -129,15 +129,17 @@
   }
 
   .sociale-ikoner {
+    width: 80px;
     display: flex;
     gap: 1rem;
-    font-size: 1.2rem;
-    color: var(--beige);
+  }
+  .sociale-ikoner img {
+    width: 100%;
   }
 
   .footer-copyright {
     text-align: center;
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     background: #000;
     color: var(--beige);
     padding: 1rem 2rem;
@@ -192,6 +194,9 @@
         border-bottom: 1px solid var(--beige);
         padding-bottom: 0.5rem;
       }
+      .sociale-ikoner {
+        width: 80px;
+      }
     }
   }
 
@@ -237,6 +242,9 @@
       margin-bottom: 1.5rem;
       border-bottom: 1px solid var(--beige);
       padding-bottom: 0.5rem;
+    }
+    .sociale-ikoner {
+      width: 80px;
     }
   }
 </style>
