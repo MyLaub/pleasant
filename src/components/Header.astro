@@ -1,11 +1,12 @@
 <header class="header">
   <div class="header-left">
-    <h1 class="logo">pleasant</h1>
+    <a href="/" class="logo">pleasant</a>
+
     <nav class="nav-links">
-      <a href="#">kasketter</a>
-      <a href="#">tøj</a>
-      <a href="#">Livsstil</a>
-      <a href="#">drops</a>
+      <a href="/products?category=kasketter">kasketter</a>
+      <a href="/products?category=tøj">tøj</a>
+      <a href="/products?category=livsstil">Livsstil</a>
+      <a href="/products?category=drops">drops</a>
     </nav>
   </div>
 
@@ -24,70 +25,6 @@
 </header>
 
 <style>
-  /* .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1.5rem;
-    background-color: var(--beige);
-  }
-
-  .header-left {
-    display: flex;
-    align-items: baseline;
-    gap: 2rem;
-  }
-
-  .logo {
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 0;
-  }
-
-  .nav-links {
-    display: flex;
-    align-items: baseline;
-    gap: 1.5rem; 
-  }
-
-  .nav-links a {
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-    font-size: 1.2rem;
-  }
-
-  .nav-links a:hover {
-    text-decoration: underline;
-  }
-
-  .header-right {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-  }
-
-  span {
-    font-family: "felt-tip-woman", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.5rem;
-  }
-
-  .account,
-  .cart {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    cursor: pointer;
-  }
-
-  .icon {
-    font-size: 1.1rem;
-  } */
-
-  /* Mobile first */
-
   .header {
     display: flex;
     justify-content: space-between;
@@ -104,6 +41,8 @@
   }
 
   .logo {
+    text-decoration: none;
+    color: black;
     font-size: 2rem;
     font-weight: bold;
     margin: 0;
@@ -163,13 +102,11 @@
     font-size: 1.1rem;
   }
 
-  /* Aktiver visning ved klik */
   .nav-links.open,
   .header-right.open {
     display: flex;
   }
 
-  /* Tablet og op (min 768px) */
   @media (min-width: 768px) {
     .burger {
       display: none;
@@ -204,17 +141,6 @@
     }
   }
 </style>
-
-<!-- <script>
-  const burger = document.querySelector(".burger");
-  const navLinks = document.querySelector(".nav-links");
-  const headerRight = document.querySelector(".header-right");
-
-  burger.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-    headerRight.classList.toggle("open");
-  });
-</script> -->
 
 <script>
   const burger = document.querySelector(".burger");

@@ -29,22 +29,22 @@
       <button>Tilmeld</button>
     </div>
     <div class="sociale-ikoner">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.facebook.com/makelifepleasant"><img src="/img/facebook.svg" alt="Facebook" /></a>
+      <a href="https://www.instagram.com/makelifepleasant/"><img src="/img/instagram.svg" alt="Instagram" /></a>
+      <a href="https://www.tiktok.com/@makelifepleasant"><img src="/img/tiktok.svg" alt="TikTok" /></a>
     </div>
   </div>
 </footer>
 
 <div class="footer-copyright">
-  <p>Copyright © 2025, Pleasant.</p>
+  <p class="footer-copyright">Copyright © 2025, Pleasant.</p>
 </div>
 
 <style>
   .footer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 8rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
     padding: 3rem 1.5rem;
     background-color: #000;
     color: var(--beige);
@@ -54,25 +54,25 @@
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     color: var(--beige);
   }
   .footer-quote {
     font-family: "felt-tip-woman", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .info {
     margin-bottom: 1rem;
-    font-size: 0.95rem;
+    font-size: 0.8rem;
     line-height: 1.6;
     color: var(--beige);
   }
 
   .footer-kolonne a {
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.8rem;
     color: var(--beige);
   }
 
@@ -92,7 +92,7 @@
 
   .footer-logo {
     max-width: 160px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     margin: 0 0 1rem 0;
     color: var(--beige);
@@ -125,21 +125,126 @@
     color: var(--beige);
     cursor: pointer;
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .sociale-ikoner {
+    width: 80px;
     display: flex;
     gap: 1rem;
-    font-size: 1.2rem;
-    color: var(--beige);
+  }
+  .sociale-ikoner img {
+    width: 100%;
   }
 
   .footer-copyright {
     text-align: center;
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     background: #000;
     color: var(--beige);
     padding: 1rem 2rem;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8rem;
+      padding: 3rem 1.5rem;
+      background-color: #000;
+      color: var(--beige);
+
+      .footer-quote {
+        font-family: "felt-tip-woman", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1rem;
+      }
+      .info {
+        margin-bottom: 1rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: var(--beige);
+      }
+      .footer-kolonne h3 {
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 0.8rem;
+        color: var(--beige);
+      }
+
+      .footer-kolonne a {
+        text-decoration: none;
+        font-size: 0.95rem;
+        color: var(--beige);
+      }
+      .footer-logo {
+        max-width: 160px;
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 0 0 1rem 0;
+        color: var(--beige);
+      }
+
+      .tilmeld-boks {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+        border-bottom: 1px solid var(--beige);
+        padding-bottom: 0.5rem;
+      }
+      .sociale-ikoner {
+        width: 80px;
+      }
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8rem;
+      padding: 3rem 1.5rem;
+      background-color: #000;
+      color: var(--beige);
+    }
+
+    .footer-quote {
+      font-family: "felt-tip-woman", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1.5rem;
+    }
+    .info {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--beige);
+    }
+
+    .footer-kolonne a {
+      text-decoration: none;
+      font-size: 0.95rem;
+      color: var(--beige);
+    }
+    .footer-logo {
+      max-width: 160px;
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 0 0 1rem 0;
+      color: var(--beige);
+    }
+
+    .tilmeld-boks {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--beige);
+      padding-bottom: 0.5rem;
+    }
+    .sociale-ikoner {
+      width: 80px;
+    }
   }
 </style>

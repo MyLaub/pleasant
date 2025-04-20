@@ -26,6 +26,13 @@ p {
 /* fonts */
 
 /* global */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--beige);
+}
 
 main {
   margin: 0 auto;
@@ -37,3 +44,69 @@ main {
   --font-secondary: "felt-tip-woman", sans-serif;
 }
 /* global */
+
+/* === Product styles === */
+.productList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.product-link {
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 5;
+  text-align: center;
+  padding: 15px 5px;
+  transition: transform 0.3s ease;
+}
+
+.card {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+  height: 100%;
+  text-align: left;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  background-color: white;
+  border-radius: 4px;
+  margin-bottom: 0.8rem;
+}
+
+.card h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  text-align: left;
+}
+
+.card p {
+  margin: 0.25rem 0;
+  text-align: left;
+}
+
+.price {
+  font-family: "felt-tip-woman", sans-serif;
+  text-align: left;
+  font-size: 1.5rem;
+}
