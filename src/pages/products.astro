@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+const { searchParams } = Astro.url;
+const category = searchParams.get("category");
+---
+
+<Layout>
+  <Fragment slot="title">Vores produkter</Fragment>
+
+  <Fragment slot="head"> </Fragment>
+
+  <div class="productList"></div>
+
+  <script type="module">
+    const listContainer = document.querySelector(".productList");
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get("category");
+
+    const SUPABASE_URL = "https://dehiywayaxfyjafhglqz.supabase.co";
+    const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRlaGl5d2F5YXhmeWphZmhnbHF6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ4NjU4NjEsImV4cCI6MjA2MDQ0MTg2MX0.-ufgpQcfoWB6md7ywXDGgQtjLailayNsFhKQR_GAUDQ";
+
+    async function fetchProducts() {
+      const response = await fetch(`${SUPABASE_URL}/rest/v1/Products?select=*`, {
+        headers: {
+          apikey: SUPABASE_KEY,
+          Authorization: `Bearer ${SUPABASE_KEY}`,
+        },
+      });
+
+      if (!response.ok) {
+        listContainer.innerHTML = "<p>Kunne ikke hente produkter 😢</p>";
+        return;
+      }
+
+      let products = await response.json();
+
+      if (category) {
+        products = products.filter((product) => {
+          const categoryValue = product.Categories;
+          if (typeof categoryValue === "string") {
+            return categoryValue.toLowerCase().includes(category.toLowerCase());
+          }
+          if (Array.isArray(categoryValue)) {
+            return categoryValue.some((c) => c.toLowerCase().includes(category.toLowerCase()));
+          }
+          return false;
+        });
+      }
+
+      const markup = products
+        .map(
+          (product) => `
+            <a href="/produkt.html?id=${product.id}" class="product-link">
+              <article class="card">
+                <img src="${product["Img url"]}" alt="${product["Product name"]}">
+                <h3>${product["Product name"]}</h3>
+                <p class="price">${product.Price} DKK</p>
+   
+              </article>
+            </a>
+          `
+        )
+        .join("");
+
+      listContainer.innerHTML = markup || "<p>Ingen produkter i denne kategori.</p>";
+    }
+
+    fetchProducts();
+  </script>
+</Layout>

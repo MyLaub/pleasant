@@ -1,0 +1,75 @@
+<!-- Din HTML-struktur i en .astro-fil eller komponent -->
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Produktliste</title>
+    <style>
+      .productList {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .card {
+        border: 1px solid #ddd;
+        padding: 1rem;
+        width: 250px;
+      }
+      .card img {
+        width: 100%;
+        height: auto;
+      }
+      .product-link {
+        text-decoration: none;
+        color: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Vores produkter</h1>
+    <div class="productList"></div>
+
+    <script type="module">
+      const listContainer = document.querySelector(".productList");
+
+      // Din Supabase info – HUSK at indsætte din egen nøgle og URL
+      const SUPABASE_URL = "https://dehiywayaxfyjafhglqz.supabase.co";
+      const SUPABASE_ANON_KEY = "DIN_SUPABASE_CLIENT_ANON_KEY";
+
+      async function fetchProducts() {
+        const response = await fetch(`${SUPABASE_URL}/rest/v1/Products?select=*`, {
+          headers: {
+            apikey: SUPABASE_ANON_KEY,
+            Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+          },
+        });
+
+        if (!response.ok) {
+          console.error("Fejl ved hentning af produkter:", response.statusText);
+          listContainer.innerHTML = "<p>Kunne ikke hente produkter 😢</p>";
+          return;
+        }
+
+        const products = await response.json();
+
+        const markup = products
+          .map((product) => {
+            return `
+            <a href="/produkt.html?id=${product.id}" class="product-link">
+              <article class="card">
+                <img src="${product["Img url"]}" alt="${product["Product name"]}">
+                <h3>${product["Product name"]}</h3>
+                <p class="price">${product.Price},-</p>
+                <p>${product.Description}</p>
+              </article>
+            </a>
+          `;
+          })
+          .join("");
+
+        listContainer.innerHTML = markup;
+      }
+
+      fetchProducts();
+    </script>
+  </body>
+</html>
